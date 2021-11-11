@@ -1,12 +1,22 @@
-Java Build Tool Bazel with Maven Dependencies Demo
+Java Bazel with IntelliJ IDEA Demo
 ===========================
 
-在Bazel中引用maven dependencies还挺麻烦。
+如何在IntelliJ IDEA中使用zabel项目：
 
-1. 需要在`WORKSPACE`里先下载`rules_jvm_external`，然后再使用它的`maven_install`下载需要的dependency
-2. 然后在`BUILD`引用`@maven//:org_apache_commons_commons_lang3`，注意这里label需要转换，把非字母的都转成`_`
+1. IDEA中常规方法安装`zabel`插件
+2. 必须使用`File` -> `Import Zabel Project`的方式导入一个zabel项目，才能让zabel插件产生作用，否则它不识别
+   ![import-zabel-project.jpg](./images/import-zabel-project.jpg)
+3. 选择正确的workspace路径
+   ![select-workspace.png](./images/select-workspace.png)
+4. 之后一路next，直到完成
+5. 可以看到生成了一个`.ijwb`的目录，包含了项目相关的信息；同时maven dependencies也正确配置
+   ![complete.png](./images/complete.png)
+6. 同时IDEA的菜单中会多一项`Bazel`，里面包含各种相关命令
+   ![menu.png](./images/menu.png)
 
-有一个问题，不知道在IDEA中，怎么自动将bazel声明的依赖加到`External Libraries`，以方便写代码时引用。
+此时每当我们修改了`WORKSPACE`或`BUILD`文件，就会弹出一个提醒，让我们手动点击`Bazel`菜单中的`Sync`选项，以更新配置。
+
+可以基本正常使用了，虽然比Maven等麻烦不少。
 
 ```
 brew install bazel

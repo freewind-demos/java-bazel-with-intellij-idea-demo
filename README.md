@@ -1,11 +1,11 @@
 Java Bazel with IntelliJ IDEA Demo
 ===========================
 
-如何在IntelliJ IDEA中使用zabel项目：
+如何在IntelliJ IDEA中使用Bazel项目：
 
-1. IDEA中常规方法安装`zabel`插件
-2. 必须使用`File` -> `Import Zabel Project`的方式导入一个zabel项目，才能让zabel插件产生作用，否则它不识别
-   ![import-zabel-project.jpg](./images/import-zabel-project.jpg)
+1. IDEA中常规方法安装`Bazel`插件
+2. 必须使用`File` -> `Import Bazel Project`的方式导入一个Bazel项目，才能让Bazel插件产生作用，否则它不识别
+   ![import-bazel-project.jpg](./images/import-bazel-project.jpg)
 3. 选择正确的workspace路径
    ![select-workspace.png](./images/select-workspace.png)
 4. 之后一路next，直到完成
